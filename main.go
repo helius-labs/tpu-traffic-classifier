@@ -12,6 +12,7 @@ import (
 	"strconv"
 	"syscall"
 	"time"
+	"strings"
 
 	"github.com/coreos/go-iptables/iptables"
 	"github.com/davecgh/go-spew/spew"
@@ -33,7 +34,7 @@ type PeerNode struct {
 type trustedProviders []string
 
 func (i *trustedProviders) String() string {
-	return strings.Join(string, ",")
+	return strings.Join(*i, ",")
 }
 
 func (i *trustedProviders) Set(value string) error {
