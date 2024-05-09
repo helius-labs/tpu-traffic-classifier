@@ -34,7 +34,7 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       with:
         files: |
-          - tpu-traffic-classifier
-          - README.md
-          - config.yml
-          - trusted_providers/helius.yml
+          - ./tpu-traffic-classifier
+          - ./README.md
+          - ./config.yml
+          - ./trusted_providers/helius.yml
